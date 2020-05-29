@@ -1,6 +1,6 @@
 use std::{path::Path};
 use serenity::{
-    model::{channel::Message, gateway::Ready},
+    model::{channel::Message},
     prelude::*,
     http::AttachmentType,
 };

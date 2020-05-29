@@ -9,7 +9,7 @@ use serenity::framework::standard::{
     }
 };
 use serenity::{
-    model::{channel::Message, gateway::Ready},
+    model::{channel::Message},
     prelude::*,
     http::AttachmentType,
 };
@@ -21,7 +21,7 @@ use commands::{
 };
 
 #[group]
-#[commands(multi,pog,add,commands,quickmaths,monkas)]
+#[commands(multi,pog,add,commands,quickmaths,monkas,git)]
 struct General;
 
 struct Handler;

@@ -1,7 +1,7 @@
 use serenity::prelude::*;
 use serenity::model::prelude::*;
 use serenity::framework::standard::{
-    Args, CommandResult,
+    CommandResult,
     macros::command,
 };
 
