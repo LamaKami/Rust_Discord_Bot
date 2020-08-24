@@ -21,26 +21,17 @@ use commands::{
 };
 
 #[group]
-#[commands(multi,pog,add,commands,quickmaths,monkas,git)]
+#[commands(multi,pog,add,commands,quickmaths,monkas,git,watch,amthor)]
 struct General;
 
 struct Handler;
 
-impl EventHandler for Handler {
-    fn message(&self, ctx: Context, msg: Message) {
-        if msg.content == "!monkasss"{
-            let msg = msg.channel_id.send_message(&ctx.http, |m| {
-                m.add_file(AttachmentType::Path(Path::new("./monkas.png")));
-                m
-            });
-        }
-    }
-}
+impl EventHandler for Handler {}
 
 fn main() {
     // Login with a bot token from the environment
     let token = include_str!("../.token");
-
+    
 	let mut client =
         Client::new(&token, Handler).expect("Error creating client");
         

@@ -11,7 +11,7 @@ use serenity::framework::standard::{
 //
 #[command]
 fn monkas(ctx: &mut Context, msg: &Message) -> CommandResult {
-    let msg = msg.channel_id.send_message(&ctx.http, |m| {
+    let _msg = msg.channel_id.send_message(&ctx.http, |m| {
             m.add_file(AttachmentType::Path(Path::new("./pictures/monkas.png")));
             m
         });
