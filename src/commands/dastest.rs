@@ -6,7 +6,7 @@ use serenity::framework::standard::{
 };
 
 #[command]
-fn message(&self, ctx: Context, msg: Message) {
+fn message(ctx: &mut Context, msg: &Message) -> CommandResult{
     if msg.content == "!hello" {
         // The create message builder allows you to easily create embeds and messages
         // using a builder syntax.
@@ -14,11 +14,7 @@ fn message(&self, ctx: Context, msg: Message) {
         // a title, description, three fields, and a footer.
         let msg = msg.channel_id.send_message(&ctx.http, |m| {
             m.content("Hello, World!");
-            m.embed(|e| {
-                e.image("attachment://ferris_eyes.png");
-                e
-            });
-            m.add_file(AttachmentType::Path(Path::new("./ferris_eyes.png")));
+            m.add_file(AttachmentType::Path(Path::new("./pictures/monkas.png")));
             m
         });
 
@@ -26,5 +22,6 @@ fn message(&self, ctx: Context, msg: Message) {
             println!("Error sending message: {:?}", why);
         }
     }
-
+    Ok(())
+}
     

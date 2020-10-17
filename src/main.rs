@@ -18,10 +18,11 @@ use commands::{
     pog::*,
     command::*,
     picture::*,
+    mh::*,
 };
 
 #[group]
-#[commands(multi,pog,add,commands,quickmaths,monkas,git,watch,amthor)]
+#[commands(multi,pog,add,commands,quickmaths,monkas,git,watch,amthor,mh)]
 struct General;
 
 struct Handler;

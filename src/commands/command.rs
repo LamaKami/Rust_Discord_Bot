@@ -7,7 +7,7 @@ use serenity::framework::standard::{
 
 #[command]
 fn commands(ctx: &mut Context, msg: &Message) -> CommandResult {
-    msg.reply(ctx, "Meinen cuten Commands sind: !pog !add !multi !quickmaths !git !watch !amthor")?;
+    msg.reply(ctx, "Meinen cuten Commands sind: !pog !add !multi !quickmaths !git !watch !amthor !mh")?;
 
     Ok(())
 }
