@@ -1,5 +1,12 @@
 mod commands;
-use std::{path::Path};
+use commands::{
+    math::*,
+    pog::*,
+    command::*,
+    picture::*,
+    mh::*,
+};
+
 use serenity::client::Client;
 use serenity::prelude::{EventHandler};
 use serenity::framework::standard::{
@@ -8,18 +15,8 @@ use serenity::framework::standard::{
         group
     }
 };
-use serenity::{
-    model::{channel::Message},
-    prelude::*,
-    http::AttachmentType,
-};
-use commands::{
-    math::*,
-    pog::*,
-    command::*,
-    picture::*,
-    mh::*,
-};
+
+
 
 #[group]
 #[commands(multi,pog,add,commands,quickmaths,monkas,git,watch,amthor,mh)]
