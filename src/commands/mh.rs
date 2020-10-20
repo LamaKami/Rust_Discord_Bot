@@ -4,7 +4,6 @@ use serenity::framework::standard::{
     Args, CommandResult,
     macros::command,
 };
-use reqwest::blocking;
 
 
 #[command]
